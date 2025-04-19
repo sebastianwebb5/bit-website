@@ -1,0 +1,157 @@
+   /* RESETEO BÁSICO */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* GRID PRINCIPAL */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  /* Áreas del Grid */
+  .header {
+    grid-area: header;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    background-image: url(/imagenes-logos-videos/banner.2.jpg);
+    border: 3px solid white;
+    
+  }
+  
+  .nav .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  .lateral {
+    grid-area: sidebar;
+   background-image: url(/imagenes-logos-videos/lateral.2.jpg);
+    padding: 1rem;
+    border: 3px solid white;
+  }
+  
+  .main {
+    grid-area: main;
+    padding: 1rem;
+    background: white;
+    background-image: url(/imagenes-logos-videos/fondo-6.jpg);
+    background-size:cover ;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+
+  
+   
+   
+  }
+  
+  .footer {
+    grid-area: footer;
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  
+    .nav .nav-list {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  /*IMAGENES-VIDEOS*/
+
+  .foto-mia{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+    border-radius: 50%;
+    border: 8px solid rgba(71, 67, 67, 0.988);
+   
+  }
+  .foto-futbol{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+    border-radius: 50%;
+    border: 8px solid rgb(65, 60, 60);
+  }
+  .foto-odf{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+    border-radius: 50%;
+    border: 8px solid rgb(53, 48, 48);
+  }
+  .foto-desarollador{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+    border-radius: 50%;
+    border: 8px solid rgb(57, 50, 50);
+  }
+  .video{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+    
+  }
+    
+  /*CALIGRAFIAS*/
+.titulos{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.parrafos{
+    text-align: center; 
+    color: rgb(255, 255, 255);
+    font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+.lista{
+    color: #ffffff;
+}
+
+
+
